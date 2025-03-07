@@ -1,4 +1,47 @@
-.d-hide, .d-none {
+@import url("https://fonts.googleapis.com/css2?family=Moirai+One&family=Orbitron:wght@400..900&display=swap");
+
+.font-wenerds {
+  font-family: "Moirai One", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  margin: 0 5px 5px;
+}
+
+.font-it-guys {
+  font-family: "Orbitron", sans-serif;
+}
+
+.fs-lg {
+  font-size: 2.5rem;
+}
+
+.fs-xsm {
+  font-size: 0.75rem;
+}
+
+.fw-bold {
+  font-weight: 700;
+}
+
+.text-decoration-none {
+  text-decoration: none;
+}
+
+.text-black {
+  color: #333;
+}
+
+.mb-0 {
+  margin-bottom: 0;
+}
+
+html,
+body {
+  font-size: 16px;
+}
+
+.d-hide,
+.d-none {
   display: none;
 }
 
@@ -16,30 +59,70 @@ form .btn {
 }
 
 /* ---- whatsapp ----*/
+@keyframes whatsapp_animation {
+  0% {
+    opacity: 0;
+    right: 0;
+    bottom: 4%;
+  }
+  100% {
+    opacity: 1;
+    right: 4%;
+    bottom: 4%;
+  }
+}
+
+@keyframes whatsapp_rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
 .w-flotante {
+  opacity: 0;
   background-color: green;
-  width: 8rem;
-  height: 8rem;
-  border-radius: 50%;
+  width: 4rem;
+  height: 4rem;
   position: fixed;
   bottom: 4%;
   right: 4%;
+  border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 1000;
+  /* animation */
+  animation-name: whatsapp_animation;
+  animation-duration: 2s;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
+
+  &:hover {
+    background-color: #2879ff;
+  }
+
+  .whatsapp {
+    color: white;
+    font-size: 2.5rem;
+    /* animation */
+    animation-name: whatsapp_rotation;
+    animation-duration: 2s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+  }
 }
-.w-flotante:hover {
-  background-color: #ff9c2c;
-}
-.w-flotante .d-none {
-  color: #fff;
-}
-.w-flotante .whatsapp {
-  text-decoration: none;
-  color: white !important;
-  font-size: 2.5rem;
-  width: 40px;
+
+.logo-wrapper {
+  padding: 15px 0;
+  display: flex;
+  align-items: center;
+  img {
+    width: 30px;
+    transform: rotate(-35deg);
+  }
 }
 
 @media screen and (max-width: 1199px) {
@@ -57,7 +140,8 @@ form .btn {
   }
 }
 @media screen and (max-width: 991px) {
-  .col-md-6, .col-md-12 {
+  .col-md-6,
+  .col-md-12 {
     width: 100%;
     float: left;
   }
@@ -72,5 +156,3 @@ form .btn {
     font-size: 40px;
   }
 }
-
-/*# sourceMappingURL=ajustes.css.map */
