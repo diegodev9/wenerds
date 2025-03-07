@@ -1,0 +1,104 @@
+.d-hide, .d-none {
+  display: none;
+}
+
+.alert {
+  margin-top: 1rem;
+}
+
+.form-control:invalid {
+  outline: none;
+}
+
+form {
+  .btn {
+    padding: 15px 40px;
+    font-size: 16px;
+  }
+}
+
+/* ---- whatsapp ----*/
+.w-flotante {
+  background-color: green;
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 4%;
+  right: 4%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  &:hover {
+    background-color:  #ff9c2c;
+  }
+
+  .d-none {
+    color: #fff;
+  }
+
+  .whatsapp {
+    text-decoration: none;
+    color: white !important;
+    font-size: 2.5rem;
+    width: 40px;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .services-item {
+    height: 160px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .text-sm-center {
+    text-align: center !important;
+  }
+
+  .services-item {
+    height: unset;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .col-md-6, .col-md-12 {
+    width: 100%;
+    float: left;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .navbar-header {
+    .logo {
+      margin-left: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  h1.home-title {
+    font-size: 40px;
+  }
+
+  // /* ---- whatsapp responsive ----*/
+  // .w-flotante {
+  //   height: 5%;
+  //   width: 100%;
+  //   overflow: hidden;
+  //   position: fixed;
+  //   bottom: 0;
+  //   right: 0;
+  //   border-radius: unset;
+  //   display: inline-flex;
+
+  //   .d-none {
+  //     display: inline;
+  //   }
+
+  //   .whatsapp {
+  //     font-size: 1.5rem;
+  //   }
+  // }
+}
